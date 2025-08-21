@@ -1,0 +1,25 @@
+.app {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+}
+
+.about,
+.projects,
+.contact {
+  padding: 2rem;
+  text-align: center;
+}
+
+.projects .project-card {
+  background: #f9f9f9;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 80%;
+}
