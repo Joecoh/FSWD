@@ -1,9 +1,8 @@
 const mongoose = require("mongoose");
 
-const habitSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  description: String,
-  doneDates: [Date] // Stores the dates when habit was done
+const HabitSchema = new mongoose.Schema({
+  name: String,
+  doneDates: [Date],
 });
 
-module.exports = mongoose.model("Habit", habitSchema);
+module.exports = mongoose.model("Habit", HabitSchema);

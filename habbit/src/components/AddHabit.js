@@ -4,18 +4,18 @@ function AddHabit({ refresh }) {
   const [name, setName] = useState("");
 
   const addHabit = async () => {
-    if (!name) return;
-    await fetch("http://localhost:5000/api/habits", {
+    if (!name.trim()) return;
+    await fetch("http://localhost:5001/api/habits", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name })
+      body: JSON.stringify({ name }),
     });
     setName("");
     refresh();
   };
 
   return (
-    <div style={{ marginBottom: "20px" }}>
+    <div>
       <input
         type="text"
         placeholder="New Habit"
